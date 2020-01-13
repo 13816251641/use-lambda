@@ -12,7 +12,7 @@ import java.util.List;
 public class TestListInForeach {
 
     /**
-     * return并不会组织list的迭代
+     * return并不会阻止list的迭代
      */
     @Test
     public void test01(){
