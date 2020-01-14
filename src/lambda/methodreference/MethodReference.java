@@ -24,6 +24,7 @@ public class MethodReference {
     public void testUseConsumer(){
         useConsumer(s -> System.out.println(s), "Hello Alex");
         useConsumer(System.out::println, "Hello Wangwenjun");
+
     }
 
 
@@ -88,6 +89,24 @@ public class MethodReference {
         ThreeFunction<String, Long, String, ComplexApple> threeFunction = ComplexApple::new;
         ComplexApple complexApple = threeFunction.apply("Green", 123L, "FuShi");
         System.out.println(complexApple);
+    }
+
+    /**
+     * 自己的实践
+     */
+    @Test
+    public void test(){
+
+        String s = new String ("hello");
+        Supplier<Integer> supplier = s::length;
+        System.out.println(supplier.get());
+
+        Function<String, Integer> stringIntegerFunction = String::length;
+        System.out.println(stringIntegerFunction.apply("a"));
+
+        BiFunction<String, Integer, Character> stringIntegerCharacterBiFunction = String::charAt;
+        System.out.println(stringIntegerCharacterBiFunction.apply("av",1));
+
     }
 
 }
