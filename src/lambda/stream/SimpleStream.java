@@ -36,11 +36,20 @@ public class SimpleStream {
     }
 
 
+    /**
+     * filter map filter map 并不是filter好了再map!!!
+     */
     @Test
     public void test(){
-        List<String> result = menu.stream().filter(d -> d.getCalories() > 300).map(d -> d.getName()).collect(Collectors.toList());
+        List<String> result = menu.stream()
+                                .filter(d->{
+                                               System.out.println("filter");
+                                               return d.getCalories() > 300;
+                                 })
+                                .map(d->{
+                                            System.out.println("map");
+                                            return d.getName();
+                                }).collect(Collectors.toList());
 
     }
-
-
 }
