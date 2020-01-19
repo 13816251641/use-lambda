@@ -4,15 +4,9 @@ import org.junit.Before;
 import org.junit.Test;
 import wangwenjun.sample.Dish;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static java.util.Comparator.comparing;
-import static java.util.stream.Collectors.toList;
 
 /**
  * Created by wangwenjun on 2016/10/18.
@@ -50,6 +44,7 @@ public class SimpleStream {
                                             System.out.println("map");
                                             return d.getName();
                                 }).collect(Collectors.toList());
+        System.out.println(result);
 
     }
 }
