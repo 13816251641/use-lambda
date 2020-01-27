@@ -59,6 +59,7 @@ public class UseOfLambda {
             */
            ComparatorInterface<? super Father> c = (p1, p2)->0;
            c.compare(new Sonn(),new Sonn());
+           c.compare(new Father(),new Father());
     }
 
     /**
