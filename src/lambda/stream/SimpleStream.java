@@ -31,7 +31,7 @@ public class SimpleStream {
 
 
     /**
-     * filter map filter map 并不是filter好了再map!!!
+     * filter map filter map 并不是所有的filter好了再map!!!
      */
     @Test
     public void test(){
