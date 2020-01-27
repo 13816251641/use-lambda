@@ -1,4 +1,4 @@
-package lambda.lambdaAndFinal;
+package lambda.lambdaandfinal;
 
 import org.junit.Test;
 
@@ -17,10 +17,9 @@ public class LambdaAndFinal {
     @Test
     public void test1(){
        int i = 100;
-       Runnable runnable = () ->{
+       Runnable runnable = () -> {
            System.out.println(i);
        };
-
     }
 
 

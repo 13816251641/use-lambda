@@ -1,6 +1,5 @@
 package lambda;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.junit.Before;
 import org.junit.Test;
@@ -62,7 +61,7 @@ public class UseOfLambda {
            c.compare(new Sonn(),new Sonn());
     }
 
-    /*
+    /**
        泛型小尝试
      */
     @Test
@@ -74,7 +73,7 @@ public class UseOfLambda {
                 return 0;
             }
         };
-        /* 只要是Father或者Father的父类都可以 */
+        /* 泛型类只要是Father或者Father的父类都可以 */
         Comparator<? super Father> comparator2 = comparator;
         /* ? super Father o1:只能接受Father或者Father的子类当做入参 */
         comparator2.compare(new Sonn(),new Sonn());

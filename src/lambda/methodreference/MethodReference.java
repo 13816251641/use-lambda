@@ -1,14 +1,11 @@
 package lambda.methodreference;
 
-import lombok.Data;
 import org.junit.Test;
 import wangwenjun.sample.Apple;
 import wangwenjun.sample.ComplexApple;
-import wangwenjun.sample.Person;
 import wangwenjun.sample.ThreeFunction;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.function.*;
 
@@ -97,7 +94,7 @@ public class MethodReference {
     @Test
     public void test(){
 
-        String s = new String ("hello");
+        String s = new String("hello");
         Supplier<Integer> supplier = s::length;
         System.out.println(supplier.get());
 
