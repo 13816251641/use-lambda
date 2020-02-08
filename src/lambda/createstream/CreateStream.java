@@ -12,8 +12,6 @@ import java.util.stream.Stream;
  * 创建stream的几种方式
  */
 public class CreateStream {
-
-
     @Test
     public void test01(){
         List<String> list = Arrays.asList("a", "b", "c", "d");
@@ -22,7 +20,7 @@ public class CreateStream {
 
     @Test
     public void test02(){
-        Stream<String> stream = Stream.of("a", "b", "c", "d");
+        Stream<Integer> stream = Stream.of(1, 2, 3, 4);
     }
 
     public void test03(){
