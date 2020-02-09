@@ -21,7 +21,7 @@ public class OperationInStream {
     private List<Dish> menu;
 
     @Before
-    public void init(){
+    public void init() {
         list = Arrays.asList(1, 2, 3, 4, 5, 6, 6, 7, 7, 1);
         menu = Arrays.asList(
                 new Dish("pork", false, 800, Dish.Type.MEAT),
@@ -39,7 +39,7 @@ public class OperationInStream {
      * 过滤
      */
     @Test
-    public void aboutFilter(){
+    public void aboutFilter() {
         List<Integer> result = list.stream().filter(p -> p > 3).collect(Collectors.toList());
         System.out.println(result);
     }
@@ -48,7 +48,7 @@ public class OperationInStream {
      * 祛重
      */
     @Test
-    public void aboutDistinct(){
+    public void aboutDistinct() {
         List<Integer> result = list.stream().distinct().collect(Collectors.toList());
         System.out.println(result);
     }
@@ -57,7 +57,7 @@ public class OperationInStream {
      * 跳过5个 6,6,7,7,1
      */
     @Test
-    public void aboutSkip(){
+    public void aboutSkip() {
         List<Integer> result = list.stream().skip(5).collect(Collectors.toList());
         System.out.println(result);
     }
@@ -67,7 +67,7 @@ public class OperationInStream {
      * 1,2,3,4,5
      */
     @Test
-    public void aboutLimit(){
+    public void aboutLimit() {
         List<Integer> result = list.stream().limit(5).collect(Collectors.toList());
         System.out.println(result);
     }
@@ -76,7 +76,7 @@ public class OperationInStream {
      * 提取
      */
     @Test
-    public void aboutMap(){
+    public void aboutMap() {
 /*        List<Integer> result = list.stream().map(p -> p * 2).collect(Collectors.toList());
         System.out.println(result);*/
 
@@ -89,21 +89,23 @@ public class OperationInStream {
      * flatMap 返回的也要是一个Stream,这一点很重要!!!
      */
     @Test
-    public void aboutFlatMap(){
-        String[] words = {"Hello","World"};
+    public void aboutFlatMap() {
+/*        String[] words = {"Hello","World"};
         //{H,e,l,l,o},{W,o,r,l,d}
         Stream<String[]> stream = Arrays.stream(words).map(p -> p.split(""));
 
         //H,e,l,l,o,W,o,r,l,d
         Stream<String> stringStream = stream.flatMap(p -> Arrays.stream(p));
 
-        stringStream.distinct().forEach(System.out::println);
+        stringStream.distinct().forEach(System.out::println);*/
 
 
+        String words[] = {"hello", "world"};
+
+        Stream<String[]> stream =Arrays.stream(words).map(w -> w.split(""));
+
+        stream.flatMap(s->Arrays.stream(s)).distinct().forEach(System.out::println);
 
     }
-
-
-
 
 }
