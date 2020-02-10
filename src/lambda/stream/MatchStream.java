@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 /**
  * @Auther ljn
  * @Date 2020/2/9
+ * match api只会返回true或者false
  */
 public class MatchStream {
     private Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5);
