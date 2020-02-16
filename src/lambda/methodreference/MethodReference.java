@@ -78,8 +78,8 @@ public class MethodReference {
      */
     public void testApple(){
         /* new Apple对象需要String和Long构成构造方法,返回一个Apple */
-        BiFunction<String, Long, Apple> appleFuntion = Apple::new;
-        Apple apple = appleFuntion.apply("red", 100L);
+        BiFunction<String, Long, Apple> appleFunction = Apple::new;
+        Apple apple = appleFunction.apply("red", 100L);
         System.out.println(apple);
 
         /* new ComplexApple对象需要String,Long,Long,并返回ComplexApple*/

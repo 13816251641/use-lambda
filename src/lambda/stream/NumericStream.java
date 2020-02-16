@@ -32,6 +32,7 @@ public class NumericStream {
 
     /**
      * 算出9和1-100中的那些数字可以组成勾三股四
+     * mapToObj Math.sqrt
      */
     @Test
     public void test02(){
@@ -43,8 +44,6 @@ public class NumericStream {
                         System.out.println(array[0]+":"+array[1]+":"+array[2]);
                     }
                 );
-
-
 
     }
 

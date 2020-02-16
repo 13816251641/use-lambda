@@ -53,9 +53,9 @@ public class UseOfLambda {
     @Test
     public void useComparatorInterface(){
            /*
-              我是这么想的:? super Father -> 入参一定要是Father或者Father的子类,
-              而我们的lambda的函数是给程序回调使用的,所以p1,p2为Father类型就一定
-              没错,因为父类可以接受子类的对象。
+              我是这么想的:? super Father -> 方法的入参一定要是Father或者Father的子类,
+              而我们的lambda的函数是给程序回调使用的,所以p1,p2为Father类型就一定没错,
+              因为父类可以接受子类的对象。
             */
            ComparatorInterface<? super Father> c = (p1, p2)->0;
            c.compare(new Sonn(),new Sonn());
