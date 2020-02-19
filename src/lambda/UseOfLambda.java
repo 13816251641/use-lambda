@@ -58,7 +58,7 @@ public class UseOfLambda {
               因为父类可以接受子类的对象。
             */
            ComparatorInterface<? super Father> c = (p1, p2)->0;
-           c.compare(new Sonn(),new Sonn());
+           c.compare(new Son(),new Son());
            c.compare(new Father(),new Father());
     }
 
@@ -77,7 +77,7 @@ public class UseOfLambda {
         /* 泛型类只要是Father或者Father的父类都可以 */
         Comparator<? super Father> comparator2 = comparator;
         /* ? super Father o1:只能接受Father或者Father的子类当做入参 */
-        comparator2.compare(new Sonn(),new Sonn());
+        comparator2.compare(new Son(),new Son());
     }
 
     @Test
@@ -161,7 +161,7 @@ public class UseOfLambda {
 
     }
 
-    class Sonn extends Father{
+    class Son extends Father{
 
     }
 
